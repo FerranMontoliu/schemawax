@@ -66,7 +66,7 @@ export class DecoderError extends SyntaxError {
   }
 }
 
-const forceDecodeWithPath = <T>(decoder: Decoder<T>, data: unknown, pathPart: string): T => {
+export const forceDecodeWithPath = <T>(decoder: Decoder<T>, data: unknown, pathPart: string): T => {
   try {
     return decoder.forceDecode(data)
   } catch (e) {
